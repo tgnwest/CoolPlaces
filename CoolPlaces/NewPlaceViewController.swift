@@ -20,7 +20,7 @@ class NewPlaceViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            print("image")
+            print("image cell")
         } else {
             view.endEditing(true)
         }
