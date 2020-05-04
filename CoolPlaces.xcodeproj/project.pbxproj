@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B82EF97F3A0B485FD851B25 /* Pods_CoolPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E971CDD302D51E9FE02E0C /* Pods_CoolPlaces.framework */; };
+		FA111F8C2460245F00AA6F8B /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA111F8B2460245F00AA6F8B /* RatingControl.swift */; };
 		FA42B362244F201200D8AF74 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42B361244F201200D8AF74 /* PlaceModel.swift */; };
 		FA42B364244F432C00D8AF74 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42B363244F432C00D8AF74 /* NewPlaceViewController.swift */; };
 		FA85E647245056B50037EF69 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85E646245056B50037EF69 /* StorageManager.swift */; };
@@ -24,6 +25,7 @@
 		82BA582C31D6EECB1A596320 /* Pods-CoolPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolPlaces.debug.xcconfig"; path = "Target Support Files/Pods-CoolPlaces/Pods-CoolPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 		84E971CDD302D51E9FE02E0C /* Pods_CoolPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32F57C3969BF82533390E57 /* Pods-CoolPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolPlaces.release.xcconfig"; path = "Target Support Files/Pods-CoolPlaces/Pods-CoolPlaces.release.xcconfig"; sourceTree = "<group>"; };
+		FA111F8B2460245F00AA6F8B /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		FA42B361244F201200D8AF74 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		FA42B363244F432C00D8AF74 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		FA85E646245056B50037EF69 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				FA42B361244F201200D8AF74 /* PlaceModel.swift */,
 				FA85E646245056B50037EF69 /* StorageManager.swift */,
 				FAD126CD244DFAF000A5A3BE /* CustomTableViewCell.swift */,
+				FA111F8B2460245F00AA6F8B /* RatingControl.swift */,
 				FA42B363244F432C00D8AF74 /* NewPlaceViewController.swift */,
 				FAD126BD244DE59900A5A3BE /* Main.storyboard */,
 				FAD126C0244DE59900A5A3BE /* Assets.xcassets */,
@@ -222,6 +225,7 @@
 				FA42B364244F432C00D8AF74 /* NewPlaceViewController.swift in Sources */,
 				FAD126B8244DE59900A5A3BE /* AppDelegate.swift in Sources */,
 				FA85E647245056B50037EF69 /* StorageManager.swift in Sources */,
+				FA111F8C2460245F00AA6F8B /* RatingControl.swift in Sources */,
 				FA42B362244F201200D8AF74 /* PlaceModel.swift in Sources */,
 				FAD126CE244DFAF000A5A3BE /* CustomTableViewCell.swift in Sources */,
 				FAD126BA244DE59900A5A3BE /* SceneDelegate.swift in Sources */,
