@@ -10,6 +10,12 @@ import UIKit
 
 @IBDesignable class RatingControl: UIStackView {
     
+    var rating = 0 {
+        didSet {
+            updateBtnSelectionState()
+        }
+    }
+    
     private var ratingBtns = [UIButton]()
     
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
@@ -22,8 +28,6 @@ import UIKit
             setupButtons()
         }
     }
-    
-    var rating = 0
     
     // MARK: Init
     
@@ -38,7 +42,16 @@ import UIKit
     }
     
     @objc func ratingBtnTapped(btn: UIButton) {
-        print("Press")
+        guard let index = ratingBtns.firstIndex(of: btn) else {
+            return
+        }
+        
+        let selectedRating = index + 1
+        if selectedRating == rating {
+            rating = 0
+        } else {
+            rating = selectedRating
+        }
     }
     
     private func setupButtons() {
@@ -50,9 +63,19 @@ import UIKit
         
         ratingBtns.removeAll()
         
+        // Load btn img
+        let bundle = Bundle(for: type(of: self))
+        let filledStar = UIImage(named: "filledStar", in: bundle, compatibleWith: self.traitCollection)
+        let emptyStar = UIImage(named: "emptyStar", in: bundle, compatibleWith: self.traitCollection)
+        let highlightedStar = UIImage(named: "highlightedStar", in: bundle, compatibleWith: self.traitCollection)
+        
         for _ in 0..<starCount {
             let btn = UIButton()
-            btn.backgroundColor = .red
+            
+            btn.setImage(emptyStar, for: .normal)
+            btn.setImage(filledStar, for: .selected)
+            btn.setImage(highlightedStar, for: .highlighted)
+            btn.setImage(highlightedStar, for: [.highlighted, .selected])
             
             btn.translatesAutoresizingMaskIntoConstraints = false
             btn.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
@@ -65,6 +88,14 @@ import UIKit
             ratingBtns.append(btn)
         }
         
+        updateBtnSelectionState()
+        
+    }
+    
+    private func updateBtnSelectionState() {
+        for (index, btn) in ratingBtns.enumerated() {
+            btn.isSelected = index < rating
+        }
     }
     
 }
