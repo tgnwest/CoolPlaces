@@ -376,12 +376,25 @@
                                     <action selector="doneBtnPressed" destination="19C-Ei-pNF" eventType="touchUpInside" id="Wdn-Fs-mga"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYd-es-Tg2">
+                                <rect key="frame" x="182" y="719" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="c9h-KR-Njm"/>
+                                    <constraint firstAttribute="width" constant="50" id="vXv-WA-FFG"/>
+                                </constraints>
+                                <state key="normal" image="GetDirection"/>
+                                <connections>
+                                    <action selector="goBtnPressed" destination="19C-Ei-pNF" eventType="touchUpInside" id="C6e-fT-9Z5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="FYd-es-Tg2" firstAttribute="centerX" secondItem="CgR-oN-9pn" secondAttribute="centerX" id="7r1-gO-CdQ"/>
                             <constraint firstItem="vcc-9i-JOX" firstAttribute="top" secondItem="CgR-oN-9pn" secondAttribute="top" id="9T8-gW-chp"/>
                             <constraint firstItem="cR1-3t-wMF" firstAttribute="trailing" secondItem="l3h-yE-dws" secondAttribute="trailing" constant="20" id="9Yg-LI-1Wg"/>
                             <constraint firstItem="cR1-3t-wMF" firstAttribute="trailing" secondItem="rh5-Xz-6Oe" secondAttribute="trailing" constant="40" id="F6J-m0-q1t"/>
+                            <constraint firstItem="cR1-3t-wMF" firstAttribute="bottom" secondItem="FYd-es-Tg2" secondAttribute="bottom" constant="39" id="Fw1-gG-7XL"/>
                             <constraint firstItem="lfo-LU-zBb" firstAttribute="centerY" secondItem="CgR-oN-9pn" secondAttribute="centerY" constant="-20" id="SB8-Lx-ARZ"/>
                             <constraint firstItem="cR1-3t-wMF" firstAttribute="bottom" secondItem="vkn-JL-qEg" secondAttribute="bottom" constant="40" id="T5V-Kl-fIC"/>
                             <constraint firstItem="vcc-9i-JOX" firstAttribute="trailing" secondItem="cR1-3t-wMF" secondAttribute="trailing" id="UfN-Vk-i9p"/>
@@ -400,6 +413,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="l3h-yE-dws" id="Itm-C7-fx8"/>
                         <outlet property="doneBtn" destination="vkn-JL-qEg" id="SZ0-X0-nWD"/>
+                        <outlet property="goBtn" destination="FYd-es-Tg2" id="lEd-4i-rQ7"/>
                         <outlet property="mapPinImage" destination="lfo-LU-zBb" id="eX7-a0-1Be"/>
                         <outlet property="mapView" destination="vcc-9i-JOX" id="RBW-aM-ziZ"/>
                     </connections>
@@ -451,6 +465,7 @@
         <segue reference="cmo-Le-0qc"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Location" width="128" height="128"/>
         <image name="Photo" width="195" height="196"/>
         <image name="camcel" width="128" height="128"/>
